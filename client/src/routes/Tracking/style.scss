@@ -1,0 +1,32 @@
+.tracking-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	.title-txt {
+		margin: 20px auto;
+	}
+
+	.map-container {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		z-index: 19;
+	}
+	.customer-mark,
+	.driver-mark,
+	.store-mark {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    width: 60px;
+    height: 60px;
+		transform: translate(-50%, -50%);
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+      object-fit: contain;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+﻿/*------  Responsive --------------------------------------*/
+/* Laptop */
+@media only screen and (max-width: 1036px) {
+}
+
+/* Tablet */
+@media only screen and (max-width: 756px) {
+}
+
+/* Mobile */
+@media only screen and (max-width: 540px) {
+    html,
+    body,
+    .map_wrap,
+    .cont_wrap,
+    .wrapper {
+        height: inherit;
+        overflow: inherit;
+    }
+    .map_wrap {
+        height: 250px;
+        margin-bottom: 15px;
+    }
+    .cost_p {
+        text-align: right !important;
+        margin-top: 20px;
+    }
+
+}
+
+/* Small Mobile */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+}

@@ -1,0 +1,199 @@
+
+.track-title {
+  text-align: center;
+  margin: 25px 0;
+}
+
+
+
+.track-num {
+  padding: 15px 0;
+}
+.track-num .form-inline {
+  text-align: center;
+}
+.track-num .form-control {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  margin-left: 10px;
+}
+.track-num button {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #e86715;
+  border-radius: 0;
+  background-color: #e86715;
+  color: #fff;
+  margin-left: -3px;
+}
+.track-num button:hover,
+.track-num button:focus {
+  border: 1px solid #e86715;
+  color: #e86715;
+  background-color: #fff;
+}
+
+.track-det h3 {
+  margin: 5px 0;
+  font-weight: bold;
+}
+.track-det p {
+  font-size: 16px;
+  font-weight: 700;
+}
+.track-code,
+.ship-status,
+.more-ship-det,
+.origin {
+  padding: 15px 0;
+  margin: 0 15px;
+}
+
+.success-status,
+.success-status * {
+  color: #e86715;
+}
+.cust-container {
+  padding: 0 2em;
+}
+.check {
+  font-size: 30px;
+  margin-top: 25%;
+}
+.det-btns {
+  text-align: right;
+}
+.det-btns a {
+  background-color: #f2f2f2;
+  border: 1px solid #eaeaea;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #000;
+  padding: 5px 0;
+  margin: 40px 5px 0;
+}
+.more-ship-det a {
+  color: #555;
+}
+.more-ship-det a i {
+  color: #e86715;
+  margin-left: 5px;
+}
+.more-ship-det h4 {
+  font-size: 17px;
+  background-color: #eae8e8;
+  padding: 7px 10px;
+  margin: 0;
+}
+.more-ship-det {
+  border-bottom: 2px solid #eaeaea;
+}
+.main-wrap {
+  background-color: #f2f2f2;
+  padding: 10px 20px;
+}
+
+.track-det {
+  background-color: #fff;
+
+}
+
+.tracking {
+  position: relative;
+  border-bottom: 2px solid #eaeaea;
+}
+.tracking .wrap {
+  padding: 30px 0;
+}
+.tracking .shap-item-main {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #eaeaea;
+  left: -70px;
+}
+.tracking .shap-item-main::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #e86715;
+  box-shadow: 0px 0px 0px 3px #e86715;
+  border: 3px solid #fff;
+  left: -6px;
+  top: 70px;
+}
+.more-details-link {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  background-color: #e86715;
+  color: #fff;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  z-index: 999;
+  text-decoration: none;
+}
+.more-details-link:focus {
+  color: #fff;
+}
+.tracking h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.tracking .pieces {
+  color: #555;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tr-inner {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eae8e8;
+}
+.tr-inner span {
+  margin-bottom: 15px;
+  display: block;
+}
+.tracking .shap-item {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #eaeaea;
+  left: -70px;
+}
+.tracking .shap-item::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #eaeaea;
+  box-shadow: 0px 0px 0px 3px #eaeaea;
+  border: 3px solid #fff;
+  left: -6px;
+  top: 70px;
+}
+.origin i {
+  color: #e86715;
+  font-size: 50px;
+  text-align: right;
+  display: block;
+  margin: 5px 48px 0;
+}
+
+
+
+
+
+
+/* end */
