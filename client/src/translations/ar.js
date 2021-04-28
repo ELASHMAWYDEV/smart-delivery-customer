@@ -1,4 +1,5 @@
 const TRANSLATIONS_AR = {
+	LOGIONE: "لوجي وان",
 	RESTAURANT: 'المطعم',
 	LOCATION: 'العنوان',
 	CAPTAIN: 'السائق',

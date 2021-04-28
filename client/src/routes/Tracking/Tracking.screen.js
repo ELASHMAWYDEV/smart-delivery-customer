@@ -73,8 +73,10 @@ const Tracking = () => {
 					);
 				}
 				console.log(data);
+				setIsLoading(false);
 			} catch (e) {
-				alert(e.message);
+				setIsLoading(false);
+				NotificationManager.error(e.message);
 			}
 		})();
 
@@ -88,9 +90,13 @@ const Tracking = () => {
 
 			socket.on('JoinCustomer', (data) => {
 				console.log(data);
-				if (!data.status) return NotificationManager.error(data.message);
+				if (!data.status) {
+					NotificationManager.error(data.message);
+					setIsLoading(true);
+					return;
+				}
 				setDriverData(data.driverData);
-				setIsLoading(false);
+				// map && map.panTo({ lat: data.driverData.lat, lng: data.driverData.lng, zoom: 18 });
 			});
 		}
 	}, [data]);
@@ -139,7 +145,7 @@ const Tracking = () => {
 				</nav>
 
 				<RiseLoader loading={isLoading} size={50} color="#eb580d" css="align-self: center;margin: auto;" />
-				{!isLoading && (
+				{!isLoading && driverData && data && (
 					<section className="wrapper">
 						<div className="row">
 							<div className="col-md-8">
@@ -149,7 +155,7 @@ const Tracking = () => {
 											<GoogleMap
 												options={{
 													gestureHandling: 'greedy',
-													streetViewControl: true,
+													// streetViewControl: true,
 													fullscreenControl: true,
 												}}
 												mapContainerStyle={{ width: '100%', height: '100%' }}
@@ -157,7 +163,7 @@ const Tracking = () => {
 													lat: driverData.lat,
 													lng: driverData.lng,
 												}}
-												zoom={10}
+												zoom={17}
 												onLoad={onLoad}
 												onUnmount={onUnmount}
 												clickableIcons

@@ -1,4 +1,5 @@
 const TRANSLATIONS_EN = {
+	LOGIONE: 'Logi One',
 	RESTAURANT: 'Restaurant',
 	LOCATION: 'Location',
 	CAPTAIN: 'Captain',
