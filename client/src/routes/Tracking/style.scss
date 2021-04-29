@@ -29,4 +29,26 @@
 			object-fit: contain;
 		}
 	}
+	.no-order-error-box {
+		background-color: #eb580d;
+		margin: auto;
+		color: #fff;
+		padding: 20px 50px;
+		border-radius: 12px;
+		max-width: 95%;
+		display: flex;
+		flex-direction: column;
+		
+		p {
+			font-size: 16px;
+		}
+		.warning-svg {
+			color: #ffffff;
+			margin: auto;
+			margin-bottom: 20px;
+			height: 70px;
+			width: 70px;
+			align-self: center;
+		}
+	}
 }

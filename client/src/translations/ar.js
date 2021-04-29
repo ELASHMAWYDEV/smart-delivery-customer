@@ -1,5 +1,5 @@
 const TRANSLATIONS_AR = {
-	LOGIONE: "لوجي وان",
+	LOGIONE: 'لوجي وان',
 	RESTAURANT: 'المطعم',
 	LOCATION: 'العنوان',
 	CAPTAIN: 'السائق',
@@ -8,6 +8,7 @@ const TRANSLATIONS_AR = {
 	ORDER_DETAILS: 'بيانات الطلب',
 	ID: 'رقم الطلب',
 	COST: 'التكلفة',
+	NO_ORDER_MESSAGE: 'يرجي فتح الرابط الذي تم ارساله لك\nقد يكون الطلب تم تسليمه أو لا يوجد طلب بهذا الرقم',
 };
 
 export default TRANSLATIONS_AR;
