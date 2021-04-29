@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 //Routes
 import { Tracking } from './routes';
@@ -65,8 +65,8 @@ const App = () => {
 		<div className="app-container">
 			<Router>
 				<Switch>
-					<Route exact path="/" component={() => <h1>Please open the link we have sent to you</h1>} />
-					<Route exact path="/:orderId" component={Tracking} />
+					<Route path="/:orderId" component={Tracking} />
+					<Redirect to="/no-orders-found"/>
 				</Switch>
 			</Router>
 		</div>
