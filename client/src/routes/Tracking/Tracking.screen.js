@@ -111,7 +111,7 @@ const Tracking = () => {
 			<NotificationContainer />
 			<div className="container tracking-container">
 				<nav className="navbar navbar-expand-lg t-navbar">
-					<a className="navbar-brand" href="#">
+					<a className="navbar-brand" href="https://logione.net">
 						<img src="assets/images/logo_b.png" alt="LogiOne Logo" className="w-100" />
 						<span className="text-black push-10-l">{t('LOGIONE')}</span>
 					</a>
@@ -253,7 +253,7 @@ const Tracking = () => {
 									<tr>
 										<td>
 											<h6 className="remove-margin">{t('MOBILE_CALL')}</h6>
-											<p className="remove-margin">{driverData.phoneNumber}</p>
+											<p className="remove-margin">0{driverData.phoneNumber}</p>
 										</td>
 										<td className="text-right">
 											<a

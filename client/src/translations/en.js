@@ -1,6 +1,6 @@
 const TRANSLATIONS_EN = {
 	LOGIONE: 'Logi One',
-	RESTAURANT: 'Restaurant',
+	RESTAURANT: 'Store',
 	LOCATION: 'Location',
 	CAPTAIN: 'Captain',
 	NAME: 'Name',

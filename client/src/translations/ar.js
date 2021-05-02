@@ -1,6 +1,6 @@
 const TRANSLATIONS_AR = {
 	LOGIONE: 'لوجي وان',
-	RESTAURANT: 'المطعم',
+	RESTAURANT: 'مكان الطلب',
 	LOCATION: 'العنوان',
 	CAPTAIN: 'السائق',
 	NAME: 'الاسم',
