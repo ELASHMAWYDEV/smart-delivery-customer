@@ -105,7 +105,7 @@ const Tracking = () => {
 
 	useEffect(() => {
 		if (!isLoading) {
-			map && map.setZoom(18);
+			map && map.setZoom(16);
 		}
 	}, [isLoading]);
 
