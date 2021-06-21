@@ -1,10 +1,10 @@
 const TRANSLATIONS_AR = {
 	LOGIONE: 'لوجي ون',
-	RESTAURANT: 'مكان التوصيل',
-	LOCATION: 'العنوان',
+	RESTAURANT: 'المتجر',
+	LOCATION: 'عنوان التسليم',
 	CAPTAIN: 'السائق',
 	NAME: 'الاسم',
-	MOBILE_CALL: 'رقم الهاتف',
+	MOBILE_CALL: 'رقم الجوال',
 	ORDER_DETAILS: 'تفاصيل الطلب',
 	ID: 'رقم الطلب',
 	COST: 'التكلفة',

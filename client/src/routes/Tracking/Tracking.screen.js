@@ -62,26 +62,29 @@ const Tracking = () => {
 		});
 		/*****************************************************/
 		//Listen for any driver updates
+		getOrder();
 
-		(async () => {
-			try {
-				setIsLoading(true);
-				let data = await getOrderData({ orderId });
-				if (data.status) {
-					setData(data.data);
-				} else {
-					setIsOrderFound(false);
-				}
-				console.log(data);
-				setIsLoading(false);
-			} catch (e) {
-				setIsLoading(false);
-				NotificationManager.error(e.message);
-			}
-		})();
+		i18n.on("languageChanged", async (lang) => await getOrder());
 
 		/*****************************************************/
 	}, []);
+
+	const getOrder = async () => {
+		try {
+			setIsLoading(true);
+			let data = await getOrderData({ orderId });
+			if (data.status) {
+				setData(data.data);
+			} else {
+				setIsOrderFound(false);
+			}
+			console.log(data);
+			setIsLoading(false);
+		} catch (e) {
+			setIsLoading(false);
+			NotificationManager.error(e.message);
+		}
+	};
 
 	useEffect(() => {
 		if (data.orderId) {
@@ -170,7 +173,7 @@ const Tracking = () => {
 												lat: driverData.lat,
 												lng: driverData.lng,
 											}}
-											zoom={18}
+											zoom={16}
 											onLoad={onLoad}
 											onUnmount={onUnmount}
 											clickableIcons
@@ -220,13 +223,17 @@ const Tracking = () => {
 							<div className="cont_wrap">
 								<div style={{ display: "flex", justifyContent: "space-between" }}>
 									<h4 className="text-primary">{t("RESTAURANT")}</h4>
-									<p className="remove-margin">#{data.orderId}</p>
+									<p className="remove-margin" style={{ fontWeight: 700 }}>
+										#{data.orderId}
+									</p>
 								</div>
 								<table className="table">
 									<tr>
 										<td>
 											<img src={data.branchLogo} style={{ width: 50, borderRadius: 5 }} />
-											<span className="push-10-l">{data.branchName}</span>
+											<span className="push-10-l" style={{ fontWeight: 600 }}>
+												{data.branchName}
+											</span>
 										</td>
 									</tr>
 									<tr>
@@ -254,12 +261,12 @@ const Tracking = () => {
 										</td>
 										<td className="text-right">
 											<a
-												href={`https://api.whatsapp.com/send?phone=${driverData.phoneNumber}&text=مرحبا ${driverData.driverNameAr}`}
+												href={`https://api.whatsapp.com/send?phone=966${driverData.phoneNumber}&text=مرحبا ${driverData.driverNameAr}`}
 												className="number_a whatsapp"
 											>
 												<i className="bi bi-whatsapp"></i>
 											</a>
-											<a href={`tel:${driverData.phoneNumber}}`} className="number_a call">
+											<a href={`tel:0${driverData.phoneNumber}}`} className="number_a call">
 												<i className="bi bi-telephone"></i>
 											</a>
 										</td>

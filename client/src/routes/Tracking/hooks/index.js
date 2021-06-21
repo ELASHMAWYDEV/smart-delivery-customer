@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const useTrakcing = () => {
+	const { i18n } = useTranslation();
+
 	const getOrderData = async ({ orderId }) => {
 		try {
 			let response = await axios.post(
@@ -10,6 +13,7 @@ const useTrakcing = () => {
 				{
 					headers: {
 						Authorization: `Bearer ${process.env.REACT_APP_API_SECRET_KEY}`,
+						"Accept-Language": i18n.language || "en",
 					},
 				}
 			);
